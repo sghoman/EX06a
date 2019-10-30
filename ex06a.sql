@@ -69,22 +69,31 @@ INSERT INTO `department` (`DepartmentName`, `BudgetCode`, `OfficeNumber`, `Depar
 --
 
 CREATE TABLE `employee` (
-  `EmployeeNumber` int(25) NOT NULL,
-  `FirstName` char(25) NOT NULL,
-  `LastName` char(35) NOT NULL,
-  `Department` char(35) NOT NULL DEFAULT 'Human Resources',
-  `Position` char(35) DEFAULT NULL,
-  `Supervisor` int(11) DEFAULT NULL,
-  `OfficePhone` char(12) DEFAULT NULL,
-  `EmailAddress` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `EmployeeNumber` int(11) NOT NULL,
+  `FirstName` varchar(255) DEFAULT NULL,
+  `LastName` varchar(255) DEFAULT NULL,
+  `Department` varchar(255) DEFAULT NULL,
+  `Position` varchar(255) DEFAULT NULL,
+  `Supervisor` varchar(255) DEFAULT NULL,
+  `OfficePhone` varchar(255) DEFAULT NULL,
+  `EmailAddress` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
 INSERT INTO `employee` (`EmployeeNumber`, `FirstName`, `LastName`, `Department`, `Position`, `Supervisor`, `OfficePhone`, `EmailAddress`) VALUES
-(0, 'Mary', 'Jacobs', 'Administration', 'CEO', NULL, '360-285-8110', 'Mary.Jacobs@WP.com');
+(1, 'Mary', 'Jacobs', 'Administration', 'CEO', '.', '360-285-8110', 'MaryJacobs@WP.com'),
+(2, 'Rosalie', 'Jackson', 'Administration', 'Adm Asst', '1', '360-285-8120', 'RosalieJackson@WP.com'),
+(3, 'Richard', 'Bandalone', 'Legal', 'Attorney', '1', '360-285-8210', 'RichardBandalone@WP.com'),
+(4, 'George', 'Smith', 'Human Resources', 'HR3', '1', '360-285-8310', 'GeorgeSmith@WP.com'),
+(5, 'Alan', 'Adams', 'Human Resources', 'HR1', '4', '360-285-8320', 'AlanAdams@WP.com'),
+(6, 'Ken', 'Evans', 'Finance', 'CFO', '1', '360-285-8410', 'KenEvans@WP.com'),
+(7, 'Mary', 'Abernathy', 'Finance', 'FA3', '6', '360-285-8420', 'MaryAbernathy@WP.com'),
+(8, 'Tom', 'Caruthers', 'Accounting', 'FA2', '6', '360-285-8430', 'TomCaruthers@WP.com'),
+(9, 'Heather', 'Jones', 'Accounting', 'FA2', '6', '360-285-8440', 'HeatherJones@WP.com'),
+(10, 'Ken', 'Numoto', 'Sales and Marketing', 'SM3', '1', '360-285-8510', 'KenNumoto@WP.com');
 
 -- --------------------------------------------------------
 
